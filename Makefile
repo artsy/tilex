@@ -37,7 +37,7 @@ setup: ## Runs the project setup.
 server: ## Starts the server.
 	sh .env
 	(sleep 3 && open http://localhost:4000/) &
-	mix phx.server
+	NODE_OPTIONS=--openssl-legacy-provider mix phx.server
 
 test: ## Tests the project.
 	mix format
