@@ -1,79 +1,57 @@
 .marketing-banner {
-  background-color: #af1e23;
+  background-color: black;
   color: white;
   display: flex;
   font-family: $secondary-typeface;
   justify-content: center;
-  line-height: 1;
+  align-items: center;
   margin: 0 auto 3vw auto;
-  max-width: 70rem;
-  text-transform: uppercase;
+  max-width: 730px;
 
-  @include tablet {
-    max-width: unset;
-  }
-
-  a {
-    color: white;
-  }
-
-  .marketing-banner-image-container {
-    align-items: center;
-    background-color: white;
-    display: flex;
-    position: relative;
-    width: 15rem;
-
-    @include tablet {
+  @include mobile {
+    margin: 2rem 1rem;
+    flex-direction: column;
+    text-align: center;
+    svg {
       display: none;
     }
-
-    .marketing-banner-image {
-      padding-left: 2rem;
-      position: absolute;
-      width: 14rem;
-      z-index: 2;
-    }
   }
 
-  .right-arrow {
-    width: 5rem;
-
-    @include tablet {
-      display: none;
-    }
+  svg {
+    margin-top: 1rem;
+    width: 39rem;
   }
 
   .marketing-banner-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
-    padding: 4rem;
-
-    @include tablet {
-      padding: 3rem;
-      text-align: center;
-    }
-
-    @include mobile {
-      padding: 2rem;
-    }
-  }
-
-  .marketing-banner-title {
+    padding: 3rem;
     font-size: 3rem;
     font-weight: 800;
     letter-spacing: 0.1rem;
   }
 
-  .marketing-banner-text {
-    font-size: 1.5rem;
-    line-height: 2.3rem;
-    margin-top: 1rem;
+  a {
+    width: 280px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    background: transparent linear-gradient(115deg, #00D2CA 0%, #C52EFF 50%, #D907E2 100%) 0% 0% no-repeat padding-box;
+    border-radius: 41px;
+    padding: 1.2rem;
+    white-space: nowrap;
+    margin-right: 3rem;
 
-    a {
-      text-decoration: underline;
+    &:hover {
+      color: white;
+    }
+
+    @include mobile {
+      max-width: 50vw;
+      font-size: 1.5rem;
+      margin-right: 0;
+      margin-bottom: 4rem;
+      align-self: center;
     }
   }
 }

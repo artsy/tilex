@@ -1,17 +1,11 @@
-<div class="marketing-banner">
-  <div class="marketing-banner-image-container">
-    <img class="marketing-banner-image" src="<%= static_path(@conn, "/images/astronaut-on-computer.png") %>">
-  </div>
-  <%= svg_tag("assets/static/images/right-arrow.svg") %>
-  <div class="marketing-banner-content">
-    <div class="marketing-banner-title">
-      <a href="<%= Application.get_env(:tilex, :hiring_url) %>">
-        We&apos;re Hiring!
-      </a>
+<%= if Application.get_env(:tilex, :marketing_banner_text) do %>
+  <div class="marketing-banner">
+    <%= svg_tag("assets/static/images/shuttle-launch.svg") %>
+    <div class="marketing-banner-content">
+      <%= Application.get_env(:tilex, :marketing_banner_text) %>
     </div>
-    <div class="marketing-banner-text">
-      Ready to join <%= Application.get_env(:tilex, :organization_name) %>?
-      Find Openings <a href="<%= Application.get_env(:tilex, :hiring_url) %>">here</a> and apply today.
-    </div>
+    <a href="#">
+      Join the Waitlist
+    </a>
   </div>
-</div>
+<% end %>

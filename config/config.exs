@@ -24,6 +24,7 @@ config :tilex, :page_size, 5
 config :tilex, :auth_controller, AuthController
 config :tilex, :slack_notifier, Tilex.Notifications.Notifiers.Slack
 config :tilex, :twitter_notifier, Tilex.Notifications.Notifiers.Twitter
+config :tilex, :marketing_banner_text, System.get_env("MARKETING_BANNER_TEXT")
 config :tilex, :organization_name, System.get_env("ORGANIZATION_NAME")
 config :tilex, :canonical_domain, System.get_env("CANONICAL_DOMAIN")
 config :tilex, :default_twitter_handle, System.get_env("DEFAULT_TWITTER_HANDLE")
