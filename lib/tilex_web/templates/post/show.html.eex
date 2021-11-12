@@ -1,4 +1,4 @@
-<%= render TilexWeb.SharedView, "_hiring_banner.html", conn: @conn %>
+<%= render TilexWeb.SharedView, "_marketing_banner.html", conn: @conn %>
 
 <%= render TilexWeb.SharedView, "post.html",
   conn: @conn,
