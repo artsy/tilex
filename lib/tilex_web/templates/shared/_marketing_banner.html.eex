@@ -4,8 +4,6 @@
     <div class="marketing-banner-content">
       <%= Application.get_env(:tilex, :marketing_banner_text) %>
     </div>
-    <a href="#">
-      Join the Waitlist
-    </a>
+    <%= link("Join the Waitlist", to: waitlist_path(@conn, :index)) %>
   </div>
 <% end %>

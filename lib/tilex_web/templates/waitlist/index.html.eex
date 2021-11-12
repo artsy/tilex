@@ -1,0 +1,22 @@
+<h1>Waitlist</h1>
+
+<%= form_for @changeset, waitlist_path(@conn, :create), fn f -> %>
+  <dl>
+    <dt>
+      <%= label f, :name %> <%= error_tag f, :name %>
+    </dt>
+    <dd>
+      <%= text_input f, :name, placeholder: "Joe Hashrocket" %>
+    </dd>
+  </dl>
+  <dl>
+    <dt>
+      <%= label f, :email %> <%= error_tag f, :email %>
+    </dt>
+    <dd>
+      <%= email_input f, :email, placeholder: "user@example.com" %>
+    </dd>
+  </dl>
+  <%= submit "Submit" %>
+  <%= link("cancel", to: "/") %>
+<% end %>
